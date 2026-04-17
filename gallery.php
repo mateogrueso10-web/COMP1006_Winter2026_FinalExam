@@ -21,7 +21,9 @@ $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <?php foreach ($results as $row): ?>
                 <div class="gallery-item">
                     <img src="<?php echo htmlspecialchars($row['file_path']); ?>" alt="Uploaded Image" class="gallery-image">
+                    
                 </div>
+
             <?php endforeach; ?>
         </div>
     </div>
