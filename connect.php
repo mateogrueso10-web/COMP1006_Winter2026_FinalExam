@@ -1,12 +1,25 @@
-<?php
-$host = "172.31.22.43";
-$user = "Mateo200655020";
-$password = "LWTPoqn5W1";
-$database = "Mateo200655020";
+<?php 
+declare(strict_types=1); 
 
-$conn = new PDO($host, $user, $password, $database);
+$host = "localhost"; //hostname
+$db = "file_uploads"; //database name
+$user = "root"; //username
+$password = ""; //password
 
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+//points to the database
+$dsn = "mysql:host=$host;dbname=$db";
+
+//try to connect, if connected echo a yay!
+try {
+   $pdo = new PDO ($dsn, $user, $password); 
+   $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+   echo "<p> YAY CONNECTED! </p>"; 
 }
-?>
+//what happens if there is an error connecting 
+catch(PDOException $e) {
+    die("Database connection failed: " . $e->getMessage()); 
+}
+
+
+
+
