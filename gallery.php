@@ -1,7 +1,7 @@
 <?php
 
 require_once "connect.php";
-$stmt = $pdo->prepare("SELECT * FROM file_uploads");
+$stmt = $pdo->prepare("SELECT * FROM images");
 $stmt->execute();
 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
