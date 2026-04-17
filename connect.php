@@ -13,7 +13,6 @@ $dsn = "mysql:host=$host;dbname=$db";
 try {
    $pdo = new PDO ($dsn, $user, $password); 
    $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-   echo "<p> YAY CONNECTED! </p>"; 
 }
 //what happens if there is an error connecting 
 catch(PDOException $e) {
