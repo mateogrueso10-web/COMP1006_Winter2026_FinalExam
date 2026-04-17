@@ -21,8 +21,6 @@ $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <?php foreach ($results as $row): ?>
                 <div class="gallery-item">
                     <img src="<?php echo $row['file_path']; ?>" class="card-img-top img-fluid" style="max-height:250px; object-fit:cover;">
-                    <p class="text-muted"><?php echo $img['file_name']; ?></p>
-                    <small class="text-secondary"><?php echo date("F j, Y H:i", strtotime($img['uploaded_at'])); ?></small>
                 </div>
 
             <?php endforeach; ?>
