@@ -18,3 +18,12 @@
             <input type="file" name="fileToUpload" id="fileToUpload" class="form-control">
         </div>
         <input type="submit" value="Upload File" name="submit" class="btn btn-primary">
+
+    </form>
+    </div>
+
+    <div class="text-center mt-5">
+        <a href="gallery.php" class="btn btn-secondary">View Gallery</a>
+    </div>
+
+    </html>
