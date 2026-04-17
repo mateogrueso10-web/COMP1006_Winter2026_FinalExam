@@ -20,8 +20,7 @@ $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <div class="gallery">
             <?php foreach ($results as $row): ?>
                 <div class="gallery-item">
-                    <img src="<?php echo htmlspecialchars($row['file_path']); ?>" alt="Uploaded Image" class="gallery-image">
-                    
+                    <img src="<?php echo $row['file_path']; ?>" class="card-img-top img-fluid" style="max-height:250px; object-fit:cover;">
                 </div>
 
             <?php endforeach; ?>
