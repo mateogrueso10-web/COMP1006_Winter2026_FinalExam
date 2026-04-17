@@ -23,6 +23,8 @@ session_start();
                 <input type="password" name="password" id="password" class="form-control" required>
             </div>
             <input type="submit" value="Login" class="btn btn-primary">
+
+            <p class="mt-3">Don't have an account? <a href="register.php">Register here</a>.</p>
         </form>
     </div>
 </body>
